@@ -2,7 +2,7 @@
     "name": "chertokdmitry/braingames",
     "description": "hexlet project",
     "bin": ["bin/brain-games"],
-    "keywords": ["cli tools ask name", "brain games"],
+    "keywords": ["cli tools ask name", "brain games", "edu project"],
     "authors": [
         {
             "name": "Dmitry Chertok",
