@@ -8,34 +8,22 @@ This project just ask your name and says 'Hi'.
 
 ###  Getting Started
 
-Look for chertokdmitry/braingames in packagist. Install in Linux via composer: composer glbal require chertokdmitry/braingames. Now just run by in terminal by brain-games command. 
-
-### Prerequisites
-
-PHP 5.3 and higher
-Composer
 ```
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+* Look for chertokdmitry/braingames in packagist. 
+* Install in Linux via composer: composer glbal require chertokdmitry/braingames.
+* Now just run by command: brain-games 
 
 ```
-until finished
+
+### Prerequisites
+
+* PHP 5.3 and higher
+* Composer
+
 ```
-
-
-### Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/chertokdmitry) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ### Versioning
 
@@ -44,8 +32,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ### Authors
 
 * **Dmitry Chertok** - *Initial work* - (https://github.com/chertodmtry)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ### License
 
