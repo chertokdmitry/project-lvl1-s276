@@ -13,8 +13,8 @@ This project just ask your name and says 'Hi'.
 ### Installing
 
 * Look for chertokdmitry/braingames in packagist. 
-* Install in Linux via composer: composer glbal require chertokdmitry/braingames.
-* Now just run by command: brain-games 
+* Install in Linux via composer: composer global require chertokdmitry/braingames.
+* Now run by command: brain-games 
 
 ```
 
