@@ -27,9 +27,9 @@ function userAnswer($num)
     return prompt('Your answer');
 }
 
-function checkEquals($num1, $num2)
+function checkEquals($string1, $string2)
 {
-    return ($num1 == $num2);
+    return ($string1 == $string2);
 }
 
 function isEven($num)
