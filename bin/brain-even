@@ -18,6 +18,3 @@ line('Answer "yes" if number even otherwise answer "no".');
 
 $name = Cli\run();
 BrainEven\even(0, $name);
-
-
-
