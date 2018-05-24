@@ -6,7 +6,7 @@
 
 [![Build Status](https://travis-ci.org/chertokdmitry/project-lvl1-s276.svg?branch=master)](https://travis-ci.org/chertokdmitry/project-lvl1-s276)
 
-This project just ask your name and says 'Hi'.
+This package includes one game 'Brain Even'. You should answer at least 3 times if number even or not.
 
 ###  Getting Started
 
@@ -22,7 +22,7 @@ This project just ask your name and says 'Hi'.
 
 ### Prerequisites
 
-* PHP 5.3 and higher
+* PHP 5.6 and higher
 * Composer
 
 ```
