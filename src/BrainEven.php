@@ -11,15 +11,25 @@ function gameFunc($promts, $name)
     }
 
     $secretNum = rand(1, 100);
-    line('Question ' . $secretNum);
-    $userAnswer = prompt('Your answer');
+    $userAnswer = userAnswer($secretNum);
     $rightAnswer = (isEven($secretNum)) ? 'yes' : 'no';
 
-    if ($userAnswer == $rightAnswer) {
-               return gameFunc($promts+1, $name);
+    if (checkEquals($rightAnswer, $userAnswer)) {
+               gameFunc($promts+1, $name);
     } else {
         return line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $rightAnswer . "'.");
     }
+}
+
+function userAnswer($num)
+{
+    line('Question ' . $num);
+    return prompt('Your answer');
+}
+
+function checkEquals($num1, $num2)
+{
+    return ($num1 == $num2);
 }
 
 function isEven($num)
