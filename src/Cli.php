@@ -11,12 +11,5 @@ function run($game)
     line('Answer "yes" if number even otherwise answer "no".');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-
-    if ($game == 1) {
-        BrainEven\even(0, $name);
-    }
-
-    if ($game == 2) {
-        BrainCalc\calc(0, $name);
-    }
+    line(BrainEven\gameFunc(0, $name));
 }

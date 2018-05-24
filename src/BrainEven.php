@@ -4,24 +4,19 @@ namespace BrainGames\BrainEven;
 use function \cli\line;
 use function \cli\prompt;
 
-function even($promts, $name)
+function gameFunc($promts, $name)
 {
     if ($promts == 3) {
-        return line('Congratulations, ' . $name . '!');
+            return line('Congratulations, ' . $name . '!');
     }
 
     $secretNum = rand(1, 100);
     line('Question ' . $secretNum);
     $userAnswer = prompt('Your answer');
-    $rightAnswer = 'no';
-
-    if (isEven($secretNum)) {
-        $rightAnswer = 'yes';
-    }
+    $rightAnswer = (isEven($secretNum)) ? 'yes' : 'no';
 
     if ($userAnswer == $rightAnswer) {
-        $promts++;
-        even($promts, $name);
+               return gameFunc($promts+1, $name);
     } else {
         return line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $rightAnswer . "'.");
     }
@@ -29,8 +24,5 @@ function even($promts, $name)
 
 function isEven($num)
 {
-    if ($num % 2 == 0) {
-        return true;
-    }
-    return false;
+    return ($num % 2 == 0);
 }
