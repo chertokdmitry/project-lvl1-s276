@@ -11,5 +11,5 @@ if (file_exists($autoloadPath1)) {
 
 use BrainGames\Cli;
 
-Cli\run();
+Cli\run(2);
 

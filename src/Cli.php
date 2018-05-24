@@ -15,4 +15,8 @@ function run($game)
     if ($game == 1) {
         BrainEven\even(0, $name);
     }
+
+    if ($game == 2) {
+        BrainCalc\calc(0, $name);
+    }
 }

@@ -1,8 +1,15 @@
 {
     "name": "chertokdmitry/braingames",
     "description": "hexlet project",
-    "bin": ["bin/brain-games", "bin/brain-even"],
-    "keywords": ["cli tools ask name", "brain games", "edu project"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc"
+],
+    "keywords": ["cli tools ask name", 
+        "brain games", 
+        "edu project"
+    ],
     "authors": [
         {
             "name": "Dmitry Chertok",

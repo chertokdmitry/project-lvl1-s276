@@ -1,10 +1,10 @@
 <?php
-namespace BrainGames\BrainEven;
+namespace BrainGames\BrainCalc;
 
 use function \cli\line;
 use function \cli\prompt;
 
-function even($promts, $name)
+function calc($promts, $name)
 {
     if ($promts == 3) {
         return line('Congratulations, ' . $name . '!');
