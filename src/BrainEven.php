@@ -8,38 +8,22 @@ function even($promts, $name)
 {
     $secretNum = rand(1, 100);
     line('Question ' . $secretNum);
-    $answer = prompt('Your answer');
-    $goodBye = [];
+    $userAnswer = prompt('Your answer');
 
-    if (($answer != 'yes') && ($answer != 'no')) {
+    if (($userAnswer != 'yes') && ($userAnswer != 'no')) {
         return line('Incorrect answer');
     }
 
-    if ($secretNum % 2 == 0) {
-        if ($answer == 'yes') {
-            line('Correct!');
-            $promts++;
-        } else {
-            $goodBye = ['no', 'yes'];
-        }
-    } else {
-        if ($answer == 'no') {
-            line('Correct!');
-            $promts++;
-        } else {
-            $goodBye = ['yes', 'no'];
-        }
-    }
-    
-    if (!empty($goodBye)) {
-        line("'" . $goodBye[0] . "' is wrong answer ;(. Correct answer was '" . $goodBye[1] . "'.");
-        line("Let's try again " . $name);
-        return;
-    }
+    $rightAnswer  = $secretNum % 2 == 0 ? 'yes' : 'no';
 
-    if ($promts < 3) {
-        even($promts, $name);
+    if ($rightAnswer == $userAnswer) {
+        $promts++;
+        if ($promts < 3) {
+            even($promts, $name);
+        } else {
+            return line('Congratulations, ' . $name . '!');
+        }
     } else {
-        line('Congratulations, ' . $name . '!');
+        return line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $rightAnswer . "'.");
     }
 }
