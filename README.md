@@ -1,12 +1,11 @@
 #  Brain games
+[![Maintainability](https://api.codeclimate.com/v1/badges/233b60322662ee882959/maintainability)](https://codeclimate.com/github/chertokdmitry/project-lvl1-s276/maintainability)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/233b60322662ee882959/test_coverage)](https://codeclimate.com/github/chertokdmitry/project-lvl1-s276/test_coverage)
 
 [![Build Status](https://travis-ci.org/chertokdmitry/project-lvl1-s276.svg?branch=master)](https://travis-ci.org/chertokdmitry/project-lvl1-s276)
 
-This project just ask your name and says 'Hi'.
+This package includes one game 'Brain Even'. You should answer at least 3 times if number even or not.
 
 ###  Getting Started
 
@@ -22,7 +21,7 @@ This project just ask your name and says 'Hi'.
 
 ### Prerequisites
 
-* PHP 5.3 and higher
+* PHP 5.6 and higher
 * Composer
 
 ```
