@@ -13,7 +13,7 @@ function isEven($num)
 }
 
 function runEven()
-{   
+{
     $func = function () {
 
         $num = rand(1, 100);
