@@ -13,9 +13,7 @@ function gameEngine($gameHeader, $promts, $queryFunc, $resultFunc)
 
     $counter = 0;
     while ($counter < $promts) {
-
         $questionArray = $queryFunc();
-
         line('Question ' . $questionArray[1]);
         $userAnswer = prompt('Your answer');
         $rightAnswer = $resultFunc($questionArray[0], $userAnswer);
