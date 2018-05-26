@@ -5,7 +5,13 @@
 
 [![Build Status](https://travis-ci.org/chertokdmitry/project-lvl1-s276.svg?branch=master)](https://travis-ci.org/chertokdmitry/project-lvl1-s276)
 
-This package includes one game 'Brain Even'. You should answer at least 3 times if number even or not.
+This package includes 3 math games:
+
+* Brain Even
+* Brain Calc
+* Brain Gcd 
+
+You have 3 promts to give correct answer.
 
 ###  Getting Started
 
@@ -15,7 +21,7 @@ This package includes one game 'Brain Even'. You should answer at least 3 times 
 
 * Look for chertokdmitry/braingames in packagist. 
 * Install in Linux via composer: composer global require chertokdmitry/braingames.
-* Now run by command: brain-games 
+* Each game runs by commands: brain-even, brain-calc, brain-gcd.
 
 ```
 
