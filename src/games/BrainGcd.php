@@ -3,14 +3,13 @@ namespace BrainGames\Games\BrainGcd;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Cli\gameEngine;
+use function \BrainGames\Cli\run;
 
-function run()
+function runGcd()
 {
-    $gameHeader = 'Find the greatest common divisor of given numbers.';
-    $promts = 3;
+    define("GAME_TASK", "Find the greatest common divisor of given numbers.");
 
-    $queryFunc = function () {
+    $func = function () {
             $findDivisorFunc = function ($a, $b) use (&$findDivisorFunc) {
                 $large = $a > $b ? $a: $b;
                 $small = $a > $b ? $b: $a;
@@ -33,8 +32,5 @@ function run()
         return [$divisor, $questionString];
     };
 
-    $resultFunc = function ($num) {
-        return $num;
-    };
-    gameEngine($gameHeader, $promts, $queryFunc, $resultFunc);
+    run($func);
 }
