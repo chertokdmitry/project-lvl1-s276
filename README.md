@@ -21,7 +21,7 @@ This package includes one game 'Brain Even'. You should answer at least 3 times 
 
 ### Prerequisites
 
-* PHP 5.6 and higher
+* PHP 7.0 and higher
 * Composer
 
 ```
