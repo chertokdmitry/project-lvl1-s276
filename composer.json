@@ -3,10 +3,11 @@
     "description": "hexlet project",
     "bin": [
         "bin/brain-gcd",
-        "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-balance",
+        "bin/brain-calc",
+        "bin/brain-even"
 ],
-    "keywords": ["cli tools ask name", 
+    "keywords": ["hexlet", 
         "brain games", 
         "edu project"
     ],
@@ -20,6 +21,7 @@
         "files": [
             "src/Cli.php",
             "src/games/BrainGcd.php",
+            "src/games/BrainBalance.php",
             "src/games/BrainCalc.php",
             "src/games/BrainEven.php"
         ]

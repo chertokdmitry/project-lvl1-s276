@@ -3,27 +3,25 @@ namespace BrainGames\Games\BrainCalc;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Cli\gameEngine;
+use function \BrainGames\Cli\run;
 
-function run()
+function runCalc()
 {
-    $gameHeader = 'What is the result of the expression?';
-    $promts = 3;
-
+    define("GAME_TASK", "What is the result of the expression?");
     $queryFunc = function () {
         
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
-        $actionArray = ['-' => ($num1 - $num2),'+' => ($num1 + $num2),'*' => ($num1 * $num2)];
-        $key = array_rand($actionArray);
-        $questionString = $num1 . ' ' . $key . ' ' . $num2;
+        $answer = ['-' => ($num1 - $num2),'+' => ($num1 + $num2),'*' => ($num1 * $num2)];
+        $sign = array_rand($answer);
+        $question = $num1 . ' ' . $sign . ' ' . $num2;
 
-        return [$actionArray[$key], $questionString];
+        return [$answer[$sign], $question];
     };
 
     $resultFunc = function ($num) {
         return $num;
     };
 
-    gameEngine($gameHeader, $promts, $queryFunc, $resultFunc);
+    run($queryFunc, $resultFunc);
 }

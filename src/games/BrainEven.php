@@ -3,12 +3,16 @@ namespace BrainGames\Games\BrainEven;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Cli\gameEngine;
+use function \BrainGames\Cli\run;
 
-function run()
+function runEven()
 {
-    $gameHeader = 'Answer "yes" if number even otherwise answer "no".';
-    $promts = 3;
+    define("GAME_TASK", "Answer 'yes' if number even otherwise answer 'no'.");
+    
+    function isEven($num)
+    {
+        return ($num % 2 === 0);
+    }
 
     $queryFunc = function () {
         $num = rand(1, 100);
@@ -16,9 +20,9 @@ function run()
     };
 
     $resultFunc = function ($num) {
-        $rightAnswer = ($num % 2 == 0) ? 'yes' : 'no';
+        $rightAnswer = isEven($num) ? 'yes' : 'no';
         return $rightAnswer;
     };
 
-    gameEngine($gameHeader, $promts, $queryFunc, $resultFunc);
+    run($queryFunc, $resultFunc);
 }
