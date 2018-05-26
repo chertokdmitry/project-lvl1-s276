@@ -4,7 +4,7 @@ namespace BrainGames\Cli;
 use function \cli\line;
 use function \cli\prompt;
 
-function run($queryFunc, $resultFunc)
+function run($gameFunc)
 {
     line('Welcome to Brain Games!');
     line(GAME_TASK);
@@ -13,17 +13,17 @@ function run($queryFunc, $resultFunc)
 
     $counter = 0;
     while ($counter < 3) {
-        $checkAnswer = $queryFunc();
+        $checkAnswer = $gameFunc();
         line('Question ' . $checkAnswer[1]);
         $userAnswer = prompt('Your answer');
-        $rightAnswer = $resultFunc($checkAnswer[0], $userAnswer);
 
-        if ($rightAnswer == $userAnswer) {
+        if ($checkAnswer[0] == $userAnswer) {
             line('Correct!');
         } else {
-            return line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $rightAnswer . "'.");
+            return line("'" . $userAnswer . "' is wrong answer ;(. Correct answer was '" . $checkAnswer[0] . "'.");
         }
         $counter++;
     }
+    
     line("Congritulations,%s! ", $name);
 }

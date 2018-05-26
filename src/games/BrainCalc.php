@@ -8,7 +8,8 @@ use function \BrainGames\Cli\run;
 function runCalc()
 {
     define("GAME_TASK", "What is the result of the expression?");
-    $queryFunc = function () {
+    
+    $func = function () {
         
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
@@ -19,9 +20,5 @@ function runCalc()
         return [$answer[$sign], $question];
     };
 
-    $resultFunc = function ($num) {
-        return $num;
-    };
-
-    run($queryFunc, $resultFunc);
+    run($func);
 }
