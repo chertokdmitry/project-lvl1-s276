@@ -5,20 +5,32 @@ use function \cli\line;
 use function \cli\prompt;
 use function \BrainGames\Cli\run;
 
+const GAME_TASK = 'What is the result of the expression?';
+const MATH = ['-', '+', '*'];
+
 function runCalc()
 {
-    define("GAME_TASK", "What is the result of the expression?");
-    
     $func = function () {
         
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
-        $answer = ['-' => ($num1 - $num2),'+' => ($num1 + $num2),'*' => ($num1 * $num2)];
-        $sign = array_rand($answer);
-        $question = $num1 . ' ' . $sign . ' ' . $num2;
+        $key = array_rand(MATH);
 
-        return [$answer[$sign], $question];
+        switch (MATH[$key]) {
+            case '-':
+                $answer = $num1 - $num2;
+                break;
+            case '+':
+                $answer = $num1 + $num2;
+                break;
+            case '*':
+                $answer = $num1 * $num2;
+                break;
+        }
+
+        $question = $num1 . ' ' . MATH[$key] . ' ' . $num2;
+        return [$answer, $question];
     };
 
-    run($func);
+    run($func, GAME_TASK);
 }

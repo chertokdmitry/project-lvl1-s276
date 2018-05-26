@@ -5,15 +5,15 @@ use function \cli\line;
 use function \cli\prompt;
 use function \BrainGames\Cli\run;
 
+const GAME_TASK = "Answer 'yes' if number even otherwise answer 'no'.";
+
 function isEven($num)
 {
     return ($num % 2 == 0);
 }
 
 function runEven()
-{
-    define("GAME_TASK", "Answer 'yes' if number even otherwise answer 'no'.");
-    
+{   
     $func = function () {
 
         $num = rand(1, 100);
@@ -21,5 +21,5 @@ function runEven()
         return [$rightAnswer, $num];
     };
 
-    run($func);
+    run($func, GAME_TASK);
 }

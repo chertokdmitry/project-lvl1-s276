@@ -5,9 +5,11 @@ use function \cli\line;
 use function \cli\prompt;
 use function \BrainGames\Cli\run;
 
+const GAME_TASK = 'Find the greatest common divisor of given numbers.';
+
 function runGcd()
 {
-    define("GAME_TASK", "Find the greatest common divisor of given numbers.");
+
 
     $func = function () {
             $findDivisor = function ($a, $b) use (&$findDivisor) {
@@ -32,5 +34,5 @@ function runGcd()
         return [$divisor, $question];
     };
 
-    run($func);
+    run($func, GAME_TASK);
 }
