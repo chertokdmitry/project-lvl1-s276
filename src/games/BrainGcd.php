@@ -26,7 +26,7 @@ function run()
             while ($divisor < 2) {
                 $num1 = rand(1, 100);
                 $num2 = rand(1, 100);
-                $divisor = $findDivisorFunc ($num1, $num2);
+                $divisor = $findDivisorFunc($num1, $num2);
             }
         }
         $questionString = $num1 . ' ' . $num2;
