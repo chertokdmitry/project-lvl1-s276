@@ -12,13 +12,13 @@ function isEven($num)
     return ($num % 2 == 0);
 }
 
-function runEven()
+function game()
 {
     $func = function () {
 
-        $num = rand(1, 100);
-        $rightAnswer = isEven($num) ? 'yes' : 'no';
-        return [$rightAnswer, $num];
+        $question = rand(1, 100);
+        $answer = isEven($question) ? 'yes' : 'no';
+        return [$answer, $question];
     };
 
     run($func, GAME_TASK);

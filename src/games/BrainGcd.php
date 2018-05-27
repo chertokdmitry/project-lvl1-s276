@@ -7,31 +7,30 @@ use function \BrainGames\Cli\run;
 
 const GAME_TASK = 'Find the greatest common divisor of given numbers.';
 
-function runGcd()
+
+function getDivisor($a, $b)
 {
+    $large = $a > $b ? $a: $b;
+    $small = $a > $b ? $b: $a;
+    $remainder = $large % $small;
+    return 0 == $remainder ? $small : getDivisor($small, $remainder);
+}
 
-
+function game()
+{
     $func = function () {
-            $findDivisor = function ($a, $b) use (&$findDivisor) {
-                $large = $a > $b ? $a: $b;
-                $small = $a > $b ? $b: $a;
-                $remainder = $large % $small;
-                return 0 == $remainder ? $small : $findDivisor($small, $remainder);
-            };
+        $answer = 0;
 
-        $num1 = rand(1, 100);
-        $num2 = rand(1, 100);
-        $divisor = $findDivisor($num1, $num2);
-
-        if ($divisor < 2) {
-            while ($divisor < 2) {
-                $num1 = rand(1, 100);
-                $num2 = rand(1, 100);
-                $divisor = $findDivisor($num1, $num2);
+        if ($answer < 2) {
+            while ($answer < 2) {
+                $a = rand(1, 100);
+                $b = rand(1, 100);
+                $answer = getDivisor($a, $b);
             }
         }
-        $question = $num1 . ' ' . $num2;
-        return [$divisor, $question];
+
+        $question = $a . ' ' . $b;
+        return [$answer, $question];
     };
 
     run($func, GAME_TASK);

@@ -6,17 +6,17 @@ use function \cli\prompt;
 use function \BrainGames\Cli\run;
 
 const GAME_TASK = 'What is the result of the expression?';
-const MATH = ['-', '+', '*'];
+const OPERATIONS = ['-', '+', '*'];
 
-function runCalc()
+function game()
 {
     $func = function () {
         
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
-        $key = array_rand(MATH);
+        $key = array_rand(OPERATIONS);
 
-        switch (MATH[$key]) {
+        switch (OPERATIONS[$key]) {
             case '-':
                 $answer = $num1 - $num2;
                 break;
@@ -28,7 +28,7 @@ function runCalc()
                 break;
         }
 
-        $question = $num1 . ' ' . MATH[$key] . ' ' . $num2;
+        $question = $num1 . ' ' . OPERATIONS[$key] . ' ' . $num2;
         return [$answer, $question];
     };
 
