@@ -2,6 +2,7 @@
     "name": "chertokdmitry/braingames",
     "description": "hexlet project",
     "bin": [
+        "bin/brain-progression",
         "bin/brain-gcd",
         "bin/brain-balance",
         "bin/brain-calc",
@@ -20,6 +21,7 @@
     "autoload": {
         "files": [
             "src/Cli.php",
+            "src/games/BrainProgression.php",
             "src/games/BrainGcd.php",
             "src/games/BrainBalance.php",
             "src/games/BrainCalc.php",
