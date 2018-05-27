@@ -1,9 +1,9 @@
 <?php
-namespace BrainGames\Games\BrainEven;
+namespace Games\Even;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Game\run;
+use function \Game\run;
 
 const GAME_TASK = "Answer 'yes' if number even otherwise answer 'no'.";
 const RAND_MIN = 1;

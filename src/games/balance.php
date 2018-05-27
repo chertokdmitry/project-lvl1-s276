@@ -1,9 +1,9 @@
 <?php
-namespace BrainGames\Games\BrainBalance;
+namespace Games\Balance;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Game\run;
+use function \Game\run;
 
 const GAME_TASK = 'Balance the given number?';
 const RAND_MIN = 100;

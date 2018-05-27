@@ -1,9 +1,9 @@
 <?php
-namespace BrainGames\Games\BrainGcd;
+namespace Games\Gcd;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Game\run;
+use function \Game\run;
 
 const GAME_TASK = 'Find the greatest common divisor of given numbers.';
 const MIN = 2;
@@ -20,7 +20,7 @@ function getDivisor($a, $b)
 function game()
 {
     $func = function () {
-        
+
         $num1 = rand(MIN, MAX);
         $num2 = rand(MIN, MAX);
         $answer = getDivisor($num1, $num2);

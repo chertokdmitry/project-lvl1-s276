@@ -1,9 +1,9 @@
 <?php
-namespace BrainGames\Games\BrainCalc;
+namespace Games\Calc;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Game\run;
+use function \Game\run;
 
 const GAME_TASK = 'What is the result of the expression?';
 const RAND_MIN = 1;

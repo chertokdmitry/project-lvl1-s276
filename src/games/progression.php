@@ -1,9 +1,9 @@
 <?php
-namespace BrainGames\Games\BrainProgression;
+namespace Games\Progression;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Game\run;
+use function \Game\run;
 
 const GAME_TASK = 'What number is missing in this progression?';
 const RAND_MIN = 10;
