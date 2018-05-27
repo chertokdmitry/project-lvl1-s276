@@ -3,9 +3,11 @@ namespace BrainGames\Games\BrainEven;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Cli\run;
+use function \BrainGames\Game\run;
 
 const GAME_TASK = "Answer 'yes' if number even otherwise answer 'no'.";
+const RAND_MIN = 1;
+const RAND_MAX = 100;
 
 function isEven($num)
 {
@@ -16,7 +18,7 @@ function game()
 {
     $func = function () {
 
-        $question = rand(1, 100);
+        $question = rand(RAND_MIN, RAND_MAX);
         $answer = isEven($question) ? 'yes' : 'no';
         return [$answer, $question];
     };

@@ -3,9 +3,11 @@ namespace BrainGames\Games\BrainBalance;
 
 use function \cli\line;
 use function \cli\prompt;
-use function \BrainGames\Cli\run;
+use function \BrainGames\Game\run;
 
 const GAME_TASK = 'Balance the given number?';
+const RAND_MIN = 100;
+const RAND_MAX = 10000;
 
 function getAnswer($num)
 {
@@ -37,14 +39,7 @@ function game()
 {
     $func = function () {
 
-        $question = rand(100, 10000);
-        $numArray = (str_split($question));
-        $lastkey = sizeof($numArray)-1;
-
-        foreach ($numArray as $key => $value) {
-            settype($numArray[$key], "int");
-        }
-
+        $question = rand(RAND_MIN, RAND_MAX);
         $answer = getAnswer($question);
         return [$answer, $question];
     };
