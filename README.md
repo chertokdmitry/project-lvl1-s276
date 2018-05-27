@@ -5,11 +5,14 @@
 
 [![Build Status](https://travis-ci.org/chertokdmitry/project-lvl1-s276.svg?branch=master)](https://travis-ci.org/chertokdmitry/project-lvl1-s276)
 
-This package includes 3 math games:
+This package includes 6 math games:
 
 * Brain Even
 * Brain Calc
 * Brain Gcd 
+* Brain Prime
+* Brain Progression
+* Brain Balance
 
 You have 3 promts to give correct answer.
 
@@ -21,7 +24,8 @@ You have 3 promts to give correct answer.
 
 * Look for chertokdmitry/braingames in packagist. 
 * Install in Linux via composer: composer global require chertokdmitry/braingames.
-* Each game runs by commands: brain-even, brain-calc, brain-gcd.
+* Each game runs by commands: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime, brain-balance
+
 
 ```
 
